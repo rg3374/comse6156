@@ -61,3 +61,9 @@ This file lists commands to install and run InfluxDB and PostgreDB in a MAC lapt
 
 The scripts for InfluxDB and PostgreSQL insert simulated data into the respectve database, run queries, measure the query response time and report it.
 The .env and the database.ini files have not been checked in as they have user tokens and passwords.
+
+References
+----------
+Code from the following websites have been modified for this experiment:
+1. Start with Python and InfluxDB https://www.influxdata.com/blog/start-python-influxdb/
+2. PostgreSQL Python https://neon.tech/postgresql/postgresql-python
