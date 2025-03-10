@@ -15,9 +15,9 @@ The .env (InfluxDB) and the database.ini (PostgreDB) files have not been checked
 2. Follow directions in https://www.influxdata.com/blog/start-python-influxdb/ \
    Create a token and a bucket using directions above.\
    It should create a .env file with the following contents\
-   TOKEN = '<Token>'\
-   ORG = "<Org>"\
-   BUCKET = '<Bucket>'
+   TOKEN = '\<Token\>'\
+   ORG = "\<Org\>"\
+   BUCKET = '\<Bucket\>'
 
 ### Run InfluxDB
    > influxd
@@ -54,12 +54,12 @@ The .env (InfluxDB) and the database.ini (PostgreDB) files have not been checked
    [postgresql]\
    host=localhost\
    database=suppliers\
-   user=<username>\
-   password=<password>
+   user=\<username\>\
+   password=\<password\>
 
 ### Run PostgreSQL
    > /opt/homebrew/opt/postgresql@14/bin/postgres -D /opt/homebrew/var/postgresql@14\
-   > createuser -s <username> # this should match username in database.ini
+   > createuser -s \<username\> # this should match username in database.ini
 
    Follow instructions in https://neon.tech/postgresql/postgresql-python
 
