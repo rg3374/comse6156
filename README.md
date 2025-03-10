@@ -1,4 +1,4 @@
-# COMS6156 Midterm Experiment
+# COMSE6156 Midterm Experiment
 For the experiemnt we install and run InfluxDB and PostgreDB in a MAC laptop.\
 Then we run queries and measure the query response time for both databases.
 
