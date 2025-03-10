@@ -2,7 +2,7 @@
 For the experiemnt we install and run InfluxDB and PostgreDB in a MAC laptop.\
 Then we run queries and measure the query response time for both databases.
 
-The scripts for InfluxDB and PostgreSQL insert simulated data into the respective database, run queries, measure the query response time and report it.\
+The scripts for InfluxDB and PostgreSQL insert simulated data into the respective database, run queries, measure the query response time and report it.
 
 The .env (InfluxDB) and the database.ini (PostgreDB) files have not been checked in as they have user tokens and passwords.
 
@@ -50,7 +50,7 @@ The .env (InfluxDB) and the database.ini (PostgreDB) files have not been checked
    Install psycopg2
    > pip install psycopg2
 
-### Create the file database.ini file with the following contents
+### Create the database.ini file with the following contents
    [postgresql]\
    host=localhost\
    database=suppliers\
