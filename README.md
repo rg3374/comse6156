@@ -1,73 +1,76 @@
-This file lists commands to install and run InfluxDB and PostgreDB in a MAC laptop.
+# COMS6156 Midterm Experiment
+For the experiemnt we install and run InfluxDB and PostgreDB in a MAC laptop.\
+Then we run queries and measure the query response time for both databases.\
 
-# InfluxDB
-## Install InfluxDB
-1. Download the open source (OSS) version from https://docs.influxdata.com/influxdb/v1/introduction/download/
-   Or
-   > brew install influxdb
+The scripts for InfluxDB and PostgreSQL insert simulated data into the respective database, run queries, measure the query response time and report it.\
+The .env (InfluxDB) and the database.ini (PostgreDB) files have not been checked in as they have user tokens and passwords.\
 
-2. Follow directions in https://www.influxdata.com/blog/start-python-influxdb/
-   Create a token and a bucket using directions above. It should create a .env file with the following contents
-   TOKEN = '<Token>'
-   ORG = "<Org>"
-   BUCKET = '<Bucket>'
+## InfluxDB
+### Install InfluxDB
+1. Download the open source (OSS) version from https://docs.influxdata.com/influxdb/v1/introduction/download/\
+   Or\
+   > brew install influxdb\
 
-## Run InfluxDB
-   > influxd
+2. Follow directions in https://www.influxdata.com/blog/start-python-influxdb/\
+   Create a token and a bucket using directions above.\
+   It should create a .env file with the following contents\
+   TOKEN = '<Token>'\
+   ORG = "<Org>"\
+   BUCKET = '<Bucket>'\
 
-## Install InfluxDB Python client
-   Create a virtual env
-   >python3 -m venv venv
+### Run InfluxDB
+   > influxd\
 
-   Activate
-   >source venv/bin/activate
+### Install InfluxDB Python client
+   Create a virtual env\
+   >python3 -m venv venv\
 
-   Install InfluxDB’s client library
-   >pip install influxdb-client
+   Activate\
+   >source venv/bin/activate\
 
-## Run the script
-   >cd influxDB-Tutorial
-   > python3 \_\_init.py\_\_
+   Install InfluxDB’s client library\
+   >pip install influxdb-client\
 
-# PostgreSQL
-## Install PostgreSQL
-   > brew install postgresql
+### Run the script
+   >cd influxDB-Tutorial\
+   > python3 \_\_init.py\_\_\
 
-## Install PostgreSQL Client
-   Create a virtual env
-   >python -m venv venv
+## PostgreSQL
+### Install PostgreSQL
+   > brew install postgresql\
 
-   Activate
-   >source venv/bin/activate
+### Install PostgreSQL Client
+   Create a virtual env\
+   >python -m venv venv\
 
-   Install psycopg2
-   > pip install psycopg2
+   Activate\
+   >source venv/bin/activate\
 
-## Create the file database.ini file with the following contents
-   [postgresql]
-   host=localhost
-   database=suppliers
-   user=<username>
-   password=<password>
+   Install psycopg2\
+   > pip install psycopg2\
 
-## Run PostgreSQL
-   > /opt/homebrew/opt/postgresql@14/bin/postgres -D /opt/homebrew/var/postgresql@14
-   > createuser -s <username> # this should match username in database.ini
+### Create the file database.ini file with the following contents
+   [postgresql]\
+   host=localhost\
+   database=suppliers\
+   user=<username>\
+   password=<password>\
 
-   Follow instructions in https://neon.tech/postgresql/postgresql-python
+### Run PostgreSQL
+   > /opt/homebrew/opt/postgresql@14/bin/postgres -D /opt/homebrew/var/postgresql@14\
+   > createuser -s <username> # this should match username in database.ini\
 
-## Run PostgreSQL Python client
-   > psql -U postgres
-   > python connect.py
-   > python create_tables.py
-   > python insert.py
-   > python query.py
+   Follow instructions in https://neon.tech/postgresql/postgresql-python\
 
-The scripts for InfluxDB and PostgreSQL insert simulated data into the respectve database, run queries, measure the query response time and report it.
-The .env and the database.ini files have not been checked in as they have user tokens and passwords.
+### Run PostgreSQL Python client
+   > psql -U postgres\
+   > python connect.py\
+   > python create_tables.py\
+   > python insert.py\
+   > python query.py\
 
 References
 ----------
-Code from the following websites have been modified for this experiment:
-1. Start with Python and InfluxDB https://www.influxdata.com/blog/start-python-influxdb/
+Code from the following websites have been modified for this experiment:\
+1. Start with Python and InfluxDB https://www.influxdata.com/blog/start-python-influxdb/\
 2. PostgreSQL Python https://neon.tech/postgresql/postgresql-python
